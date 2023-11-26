@@ -19,22 +19,23 @@ const config: Config = {
         xl: '1200px',
       },
     },
+    colors: {
+      black: '#273029',
+      softGreen: {
+        DEFAULT: '#85c7dc',
+        secondary: '#f3f9fb',
+      },
+      grey: {
+        DEFAULT: '#888',
+        secondary: '#f8f8f8',
+      },
+      orange: '#f2994a',
+      outline: '#f1f1f1',
+      pink: '#f3d1d7',
+      body: '#e5e5e5',
+    },
     extend: {
       colors: {
-        black: '#273029',
-        softGreen: {
-          DEFAULT: '#85c7dc',
-          secondary: '#f3f9fb',
-        },
-        gray: {
-          DEFAULT: '#888',
-          secondary: '#f8f8f8',
-        },
-        orange: '#f2994a',
-        outline: '#f1f1f1',
-        pink: '#f3d1d7',
-        body: '#e5e5e5',
-
         border: 'hsl(var(--border))',
         input: 'hsl(var(--input))',
         ring: 'hsl(var(--ring))',
@@ -90,8 +91,8 @@ const config: Config = {
       },
     },
     backgroundImage: {
-      hero: 'url(/hero.bg.png)',
-      hero2: 'url(/hero.bg-2.png)',
+      hero: 'url("/hero/bg.png")',
+      hero2: 'url("/hero/bg-2.png")',
     },
   },
   plugins: [require('tailwindcss-animate')],
