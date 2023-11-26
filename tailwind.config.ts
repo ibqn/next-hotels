@@ -13,11 +13,28 @@ const config: Config = {
       center: true,
       padding: '2rem',
       screens: {
-        '2xl': '1400px',
+        sm: '640px',
+        md: '768px',
+        lg: '960px',
+        xl: '1200px',
       },
     },
     extend: {
       colors: {
+        black: '#273029',
+        softGreen: {
+          DEFAULT: '#85c7dc',
+          secondary: '#f3f9fb',
+        },
+        gray: {
+          DEFAULT: '#888',
+          secondary: '#f8f8f8',
+        },
+        orange: '#f2994a',
+        outline: '#f1f1f1',
+        pink: '#f3d1d7',
+        body: '#e5e5e5',
+
         border: 'hsl(var(--border))',
         input: 'hsl(var(--input))',
         ring: 'hsl(var(--ring))',
@@ -71,6 +88,10 @@ const config: Config = {
         'accordion-down': 'accordion-down 0.2s ease-out',
         'accordion-up': 'accordion-up 0.2s ease-out',
       },
+    },
+    backgroundImage: {
+      hero: 'url(/hero.bg.png)',
+      hero2: 'url(/hero.bg-2.png)',
     },
   },
   plugins: [require('tailwindcss-animate')],
