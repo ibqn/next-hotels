@@ -21,7 +21,7 @@ export const DatePicker = (props: Props) => {
     <Popover>
       <PopoverTrigger asChild>
         <Button
-          // variant="ghost"
+          variant="default"
           className={cn(
             'w-full justify-between text-left font-medium',
             !date && 'text-black'

@@ -21,7 +21,8 @@ const config: Config = {
     },
     colors: {
       black: '#273029',
-      softGreen: {
+      white: '#fff',
+      softgreen: {
         DEFAULT: '#85c7dc',
         secondary: '#f3f9fb',
       },

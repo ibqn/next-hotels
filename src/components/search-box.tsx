@@ -4,6 +4,7 @@ import { MapPin } from 'lucide-react'
 import { Input } from '@/components/ui/input'
 import { Label } from '@/components/ui/label'
 import { DatePicker } from '@/components/date-picker'
+import { GuestSelect } from '@/components/guest-select'
 
 type Props = {}
 
@@ -23,6 +24,18 @@ export const SearchBox = (props: Props) => {
             <Label>Check in</Label>
             <DatePicker />
           </div>
+
+          <div>
+            <Label>Check out</Label>
+            <DatePicker />
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <div>
+          <Label>Guests</Label>
+          <GuestSelect />
         </div>
       </div>
     </div>
