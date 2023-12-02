@@ -5,12 +5,14 @@ import { Input } from '@/components/ui/input'
 import { Label } from '@/components/ui/label'
 import { DatePicker } from '@/components/date-picker'
 import { GuestSelect } from '@/components/guest-select'
+import { Checkbox } from '@/components/ui/checkbox'
+import { Button } from '@/components/ui/button'
 
 type Props = {}
 
 export const SearchBox = (props: Props) => {
   return (
-    <div className="bg-pink">
+    <div className="bg-white flex max-h-max w-full max-w-[488px] flex-col rounded-[20px] border border-outline p-10">
       <div>
         <Label htmlFor="destination">Where are you going?</Label>
 
@@ -37,6 +39,15 @@ export const SearchBox = (props: Props) => {
           <Label>Guests</Label>
           <GuestSelect />
         </div>
+
+        <div>
+          <Checkbox id="terms" />
+          <Label htmlFor="terms">Pay when checking in?</Label>
+        </div>
+
+        <Button size="lg" variant="accent">
+          Search Hotel
+        </Button>
       </div>
     </div>
   )
