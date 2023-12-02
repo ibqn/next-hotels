@@ -12,8 +12,8 @@ type Props = {}
 
 export const SearchBox = (props: Props) => {
   return (
-    <div className="bg-white flex max-h-max w-full max-w-[488px] flex-col rounded-[20px] border border-outline p-10">
-      <div>
+    <div className="flex max-h-max w-full max-w-[488px] flex-col rounded-[20px] border border-outline bg-white p-10">
+      <div className="mb-[20px]">
         <Label htmlFor="destination">Where are you going?</Label>
 
         <div className="relative mb-[20px] flex items-center">
@@ -21,28 +21,30 @@ export const SearchBox = (props: Props) => {
           <MapPin size={24} className="absolute right-6 text-black" />
         </div>
 
-        <div>
-          <div>
+        <div className="flex  flex-col gap-x-[30px] gap-y-5 xl:flex-row xl:gap-y-0">
+          <div className="flex flex-1 flex-col">
             <Label>Check in</Label>
             <DatePicker />
           </div>
 
-          <div>
+          <div className="flex flex-1 flex-col">
             <Label>Check out</Label>
             <DatePicker />
           </div>
         </div>
       </div>
 
-      <div>
-        <div>
+      <div className="flex flex-col">
+        <div className="mb-[24px] flex flex-1 flex-col">
           <Label>Guests</Label>
           <GuestSelect />
         </div>
 
-        <div>
+        <div className="mb-[24px] flex items-center gap-x-3">
           <Checkbox id="terms" />
-          <Label htmlFor="terms">Pay when checking in?</Label>
+          <Label htmlFor="terms" className="mb-0 font-semibold">
+            Pay when checking in?
+          </Label>
         </div>
 
         <Button size="lg" variant="accent">
