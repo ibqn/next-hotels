@@ -7,12 +7,20 @@ import { DatePicker } from '@/components/date-picker'
 import { GuestSelect } from '@/components/guest-select'
 import { Checkbox } from '@/components/ui/checkbox'
 import { Button } from '@/components/ui/button'
+import { motion } from 'framer-motion'
+import { FadeDirection, fadeIn } from '@/utils/variants'
 
 type Props = {}
 
 export const SearchBox = (props: Props) => {
   return (
-    <div className="flex max-h-max w-full max-w-[488px] flex-col rounded-[20px] border border-outline bg-white p-10">
+    <motion.div
+      variants={fadeIn(FadeDirection.up, 0.2)}
+      initial="hidden"
+      whileInView="show"
+      viewport={{ once: false, amount: 0 }}
+      className="flex max-h-max w-full max-w-[488px] flex-col rounded-[20px] border border-outline bg-white p-10"
+    >
       <div className="mb-[20px]">
         <Label htmlFor="destination">Where are you going?</Label>
 
@@ -51,6 +59,6 @@ export const SearchBox = (props: Props) => {
           Search Hotel
         </Button>
       </div>
-    </div>
+    </motion.div>
   )
 }
