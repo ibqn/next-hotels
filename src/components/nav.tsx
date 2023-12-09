@@ -30,9 +30,9 @@ export const Nav = ({ listStyles, ...props }: Props) => {
 
   return (
     <nav {...props}>
-      <ul>
+      <ul className={listStyles}>
         {links.map(({ name, path }, index) => (
-          <li key={index} className={listStyles}>
+          <li key={index}>
             <Link href={path}>{name}</Link>
           </li>
         ))}
