@@ -4,6 +4,7 @@ import { useMemo } from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import 'swiper/css'
 import { Button } from './ui/button'
+import Image from 'next/image'
 
 type Props = {}
 
@@ -73,10 +74,13 @@ export const Recommendations = (props: Props) => {
       <div>
         <Swiper>
           {recommendations.map(
-            ({ name, location, description, price }, index) => (
+            (
+              { name, location, description, price, image, testimonial },
+              index
+            ) => (
               <SwiperSlide key={index}>
-                <div>
-                  <div className="max-w-[345px] xl:pt-8">
+                <div className="flex flex-col gap-y-12 xl:flex-row xl:gap-y-0 xl:pl-[135px]">
+                  <div className="order-2 mx-auto max-w-[345px] text-center xl:order-1 xl:mx-0 xl:pt-8 xl:text-left">
                     <h2 className="h2 mb-4">{name}</h2>
 
                     <p className="mb-6 text-sm text-softgreen">{location}</p>
@@ -95,7 +99,23 @@ export const Recommendations = (props: Props) => {
                     </div>
                   </div>
 
-                  <div>image & testimonials</div>
+                  <div className="relative order-1 h-[634px] flex-1 justify-center xl:order-2 xl:justify-end">
+                    <div>
+                      <Image
+                        className="xl:rounded-bl-[20px] xl:rounded-tl-[20px]"
+                        src={`/recommendation/${image}`}
+                        width={905}
+                        height={528}
+                        quality={100}
+                        alt="Recommendation"
+                      />
+
+                      <div>
+                        <p>{testimonial.message}</p>
+                        <p>{testimonial.name}</p>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </SwiperSlide>
             )
