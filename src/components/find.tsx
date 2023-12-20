@@ -71,7 +71,7 @@ export const Find = (props: Props) => {
         </div>
 
         <motion.div
-          className="grid gap-y-10 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-[30px] xl:gap-y-0"
+          className="grid gap-y-10 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-[30px] xl:gap-y-0"
           variants={fadeIn(FadeDirection.up, 0.6)}
           initial="hidden"
           whileInView="show"
