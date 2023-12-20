@@ -82,12 +82,15 @@ export const Find = (props: Props) => {
               className="group mx-auto h-[390px] w-[270px] overflow-hidden rounded-xl border-2 border-outline transition-all duration-700 hover:cursor-pointer hover:bg-softgreen xl:mx-0"
               key={index}
             >
-              <Image
-                src={`/find/${image}`}
-                width={270}
-                height={270}
-                alt="Hotel"
-              />
+              <div className="h-[270px] w-[270px] overflow-hidden">
+                <Image
+                  src={`/find/${image}`}
+                  width={270}
+                  height={270}
+                  alt="Hotel"
+                  className="transition-all duration-300 group-hover:scale-105"
+                />
+              </div>
 
               <div className="p-6">
                 <h4 className="h4 transition-all duration-300 group-hover:text-white">
