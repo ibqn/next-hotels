@@ -1,5 +1,10 @@
+'use client'
+
 import { useMemo } from 'react'
 import { Button } from '@/components/ui/button'
+import Image from 'next/image'
+import { motion } from 'framer-motion'
+import { FadeDirection, fadeIn } from '@/utils/variants'
 
 type Props = {}
 
@@ -33,18 +38,68 @@ export const Find = (props: Props) => {
   return (
     <section className="py-12 xl:py-36">
       <div className="container mx-auto">
-        <div>
-          <h2>Find your best hotel</h2>
-          <p className="mx-auto mb-8 max-w-[638px]">
+        <div className="text-center">
+          <motion.h2
+            className="h2 mb-2"
+            variants={fadeIn(FadeDirection.up, 0.2)}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: false, amount: 0.2 }}
+          >
+            Find your best hotel
+          </motion.h2>
+          <motion.p
+            className="mx-auto mb-8 max-w-[638px]"
+            variants={fadeIn(FadeDirection.up, 0.4)}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: false, amount: 0.2 }}
+          >
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fuga, eum
             optio ad qui illum debitis velit ratione ipsum neque doloremque!
-          </p>
-          <div>
+          </motion.p>
+          <motion.div
+            variants={fadeIn(FadeDirection.up, 0.6)}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: false, amount: 0.2 }}
+          >
             <Button variant="accent" className="mb-12 px-12 xl:mb-28">
               View All
             </Button>
-          </div>
+          </motion.div>
         </div>
+
+        <motion.div
+          className="grid gap-y-10 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-[30px] xl:gap-y-0"
+          variants={fadeIn(FadeDirection.up, 0.6)}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: false, amount: 0.2 }}
+        >
+          {hotels.map(({ image, name, location }, index) => (
+            <div
+              className="group mx-auto h-[390px] w-[270px] overflow-hidden rounded-xl border-2 border-outline transition-all duration-700 hover:cursor-pointer hover:bg-softgreen xl:mx-0"
+              key={index}
+            >
+              <Image
+                src={`/find/${image}`}
+                width={270}
+                height={270}
+                alt="Hotel"
+              />
+
+              <div className="p-6">
+                <h4 className="h4 transition-all duration-300 group-hover:text-white">
+                  {name}
+                </h4>
+                <p className="transition-all duration-300 group-hover:text-white">
+                  {location}
+                </p>
+              </div>
+            </div>
+          ))}
+        </motion.div>
       </div>
     </section>
   )
