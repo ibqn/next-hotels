@@ -71,7 +71,7 @@
     @apply border-border;
   }
   body {
-    @apply bg-body text-grey leading-8;
+    @apply bg-body leading-8 text-grey;
   }
 
   h1,
@@ -92,4 +92,10 @@
   .h4 {
     @apply text-xl;
   }
+}
+
+.swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,
+.swiper-pagination-horizontal.swiper-pagination-bullets
+  .swiper-pagination-bullet {
+  @apply bg-white p-2;
 }
