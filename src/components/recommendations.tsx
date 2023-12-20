@@ -2,9 +2,12 @@
 
 import { useMemo } from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react'
+import { Autoplay } from 'swiper/modules'
 import 'swiper/css'
 import { Button } from '@/components/ui/button'
 import Image from 'next/image'
+import { motion } from 'framer-motion'
+import { FadeDirection, fadeIn } from '@/utils/variants'
 
 type Props = {}
 
@@ -70,9 +73,25 @@ export const Recommendations = (props: Props) => {
   )
 
   return (
-    <section className="relative bg-softgreen-secondary pb-12 xl:pb-[112px] xl:pt-[157px]">
-      <div>
-        <Swiper>
+    <motion.section
+      className="relative bg-softgreen-secondary pb-12 xl:pb-[112px] xl:pt-[157px]"
+      variants={fadeIn(FadeDirection.up, 0.2)}
+      initial="hidden"
+      whileInView="show"
+      viewport={{ once: false, amount: 0 }}
+    >
+      <motion.div
+        variants={fadeIn(FadeDirection.up, 0.4)}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: false, amount: 0 }}
+      >
+        <Swiper
+          modules={[Autoplay]}
+          autoplay={{ delay: 4000, disableOnInteraction: true }}
+          loop
+          speed={2000}
+        >
           {recommendations.map(
             (
               { name, location, description, price, image, testimonial },
@@ -123,7 +142,7 @@ export const Recommendations = (props: Props) => {
             )
           )}
         </Swiper>
-      </div>
-    </section>
+      </motion.div>
+    </motion.section>
   )
 }
