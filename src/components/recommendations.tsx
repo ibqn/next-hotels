@@ -143,6 +143,14 @@ export const Recommendations = (props: Props) => {
           )}
         </Swiper>
       </motion.div>
+
+      <Image
+        src={'/recommendation/pattern.svg'}
+        alt="Pattern"
+        width={240}
+        height={240}
+        className="absolute -bottom-[120px] left-[135px] hidden xl:flex"
+      />
     </motion.section>
   )
 }
