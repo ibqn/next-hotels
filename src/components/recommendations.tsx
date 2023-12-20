@@ -3,7 +3,7 @@
 import { useMemo } from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import 'swiper/css'
-import { Button } from './ui/button'
+import { Button } from '@/components/ui/button'
 import Image from 'next/image'
 
 type Props = {}
@@ -70,7 +70,7 @@ export const Recommendations = (props: Props) => {
   )
 
   return (
-    <section>
+    <section className="relative bg-softgreen-secondary pb-12 xl:pb-[112px] xl:pt-[157px]">
       <div>
         <Swiper>
           {recommendations.map(
@@ -99,7 +99,7 @@ export const Recommendations = (props: Props) => {
                     </div>
                   </div>
 
-                  <div className="relative order-1 h-[634px] flex-1 justify-center xl:order-2 xl:justify-end">
+                  <div className="relative order-1 flex h-[634px] flex-1 justify-center xl:order-2 xl:justify-end">
                     <div>
                       <Image
                         className="xl:rounded-bl-[20px] xl:rounded-tl-[20px]"
@@ -110,9 +110,11 @@ export const Recommendations = (props: Props) => {
                         alt="Recommendation"
                       />
 
-                      <div>
-                        <p>{testimonial.message}</p>
-                        <p>{testimonial.name}</p>
+                      <div className="bg-softgreen p-4 text-center text-white xl:absolute xl:bottom-0 xl:min-h-[212px] xl:max-w-[468px] xl:translate-x-1/2 xl:rounded-xl xl:px-10 xl:text-left">
+                        <p className="mx-auto mb-3 max-w-md xl:mx-0 xl:mb-6 xl:max-w-none">
+                          {testimonial.message}
+                        </p>
+                        <p className="text-xl font-bold">{testimonial.name}</p>
                       </div>
                     </div>
                   </div>
