@@ -14,4 +14,4 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 ## Mobile Screenshot
 
-![mobile screenshot](./screenshot-mobile.png)
+<img src="./screenshot-mobile.png" width="412">
