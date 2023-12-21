@@ -18,7 +18,7 @@ export const SearchBox = (props: Props) => {
       variants={fadeIn(FadeDirection.up, 0.2)}
       initial="hidden"
       whileInView="show"
-      viewport={{ once: false, amount: 0 }}
+      viewport={{ once: true }}
       className="flex max-h-max w-full max-w-[488px] flex-col rounded-[20px] border border-outline bg-white p-10"
     >
       <div className="mb-[20px]">

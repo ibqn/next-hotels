@@ -29,7 +29,7 @@ export const Footer = (props: Props) => {
           variants={fadeIn(FadeDirection.up, 0.4)}
           initial="hidden"
           whileInView="show"
-          viewport={{ once: false, amount: 0.2 }}
+          viewport={{ once: true }}
         >
           <div className="flex min-h-[394px] flex-col rounded-xl bg-white p-8 xl:-translate-y-36 xl:flex-row xl:gap-x-12 xl:p-20">
             <div className="mb-6 xl:mb-0 xl:w-[470px]">

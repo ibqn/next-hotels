@@ -12,7 +12,7 @@ export const Featured = (props: Props) => {
       variants={fadeIn(FadeDirection.up, 0.2)}
       initial="hidden"
       whileInView="show"
-      viewport={{ once: false, amount: 0.4 }}
+      viewport={{ once: true }}
       className="relative ml-auto max-w-[1305px] rounded-bl-[30px] rounded-tl-[30px] bg-softgreen-secondary px-[80px] py-[60px] xl:-top-[120px] xl:h-[240px]"
     >
       <div className="flex h-full flex-col items-center gap-x-[30px] text-center xl:flex-row xl:text-left">

@@ -54,7 +54,7 @@ export const Testimonials = (props: Props) => {
       variants={fadeIn(FadeDirection.up, 0.4)}
       initial="hidden"
       whileInView="show"
-      viewport={{ once: false, amount: 0 }}
+      viewport={{ once: true }}
     >
       <div className="container mx-auto">
         <Swiper

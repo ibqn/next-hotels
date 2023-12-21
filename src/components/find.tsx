@@ -44,7 +44,7 @@ export const Find = (props: Props) => {
             variants={fadeIn(FadeDirection.up, 0.2)}
             initial="hidden"
             whileInView="show"
-            viewport={{ once: false, amount: 0.2 }}
+            viewport={{ once: true }}
           >
             Find your best hotel
           </motion.h2>
@@ -53,7 +53,7 @@ export const Find = (props: Props) => {
             variants={fadeIn(FadeDirection.up, 0.4)}
             initial="hidden"
             whileInView="show"
-            viewport={{ once: false, amount: 0.2 }}
+            viewport={{ once: true }}
           >
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fuga, eum
             optio ad qui illum debitis velit ratione ipsum neque doloremque!
@@ -62,7 +62,7 @@ export const Find = (props: Props) => {
             variants={fadeIn(FadeDirection.up, 0.6)}
             initial="hidden"
             whileInView="show"
-            viewport={{ once: false, amount: 0.2 }}
+            viewport={{ once: true }}
           >
             <Button variant="accent" className="mb-12 px-12 xl:mb-28">
               View All
@@ -75,7 +75,7 @@ export const Find = (props: Props) => {
           variants={fadeIn(FadeDirection.up, 0.6)}
           initial="hidden"
           whileInView="show"
-          viewport={{ once: false, amount: 0.2 }}
+          viewport={{ once: true }}
         >
           {hotels.map(({ image, name, location }, index) => (
             <div

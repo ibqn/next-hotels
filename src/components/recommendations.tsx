@@ -78,13 +78,13 @@ export const Recommendations = (props: Props) => {
       variants={fadeIn(FadeDirection.up, 0.2)}
       initial="hidden"
       whileInView="show"
-      viewport={{ once: false, amount: 0 }}
+      viewport={{ once: true }}
     >
       <motion.div
         variants={fadeIn(FadeDirection.up, 0.4)}
         initial="hidden"
         whileInView="show"
-        viewport={{ once: false, amount: 0 }}
+        viewport={{ once: true }}
       >
         <Swiper
           modules={[Autoplay]}

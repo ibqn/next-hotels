@@ -24,7 +24,7 @@ export const About = (props: Props) => {
             variants={fadeIn(FadeDirection.right, 0.2)}
             initial="hidden"
             whileInView="show"
-            viewport={{ once: false, amount: 0.4 }}
+            viewport={{ once: true }}
           >
             <Image src="/about/img2.png" alt="About" width={559} height={721} />
           </motion.div>
@@ -34,7 +34,7 @@ export const About = (props: Props) => {
             variants={fadeIn(FadeDirection.left, 0.5)}
             initial="hidden"
             whileInView="show"
-            viewport={{ once: false, amount: 0.4 }}
+            viewport={{ once: true }}
           >
             <h2 className="h2 mb-[38px]">About Hotely</h2>
             <p>
